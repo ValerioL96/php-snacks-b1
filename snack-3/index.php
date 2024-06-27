@@ -51,12 +51,18 @@ $posts = [
 ?>
 
 
-<ul>
     <?php 
-        foreach($posts as $chiave => $post){?>
-        <li>
-            <?php echo $chiave?>;
-            <?php echo $post['title'];?>-<?php echo $post['author'];?>-<?php echo $post['text'];?>
-        </li>
+        foreach($posts as $date => $datepost){?>
+
+        <h2>
+            data: <?php echo $date; ?>
+        </h2>
+
+        <ul>
+        <?php foreach($datepost as $post){?>
+            <li>
+                <?php echo $post['title'];?>-<?php echo $post['author'];?>-<?php echo $post['text'];?>
+            </li>
         <?php }?>
-</ul>
+        </ul>
+    <?php }?>

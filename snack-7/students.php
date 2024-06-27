@@ -34,7 +34,7 @@ $students = [
 <ul>
     <?php foreach($students as $student) {?>
         <li>
-                    <?php echo $student['name'];?>  <?php echo $student['lastname'];?> <?php echo $student['votes'];?>
+                    <?php echo $student['name'];?>  <?php echo $student['lastname'];?> <?php echo $student[$votes];?>
                 </li>
             <?php }?>
 </ul>
