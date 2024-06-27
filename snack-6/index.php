@@ -39,16 +39,16 @@ $db = [
 <body>
     <div class="bg-grey">
         <ul>
-            <?php foreach($db as $teachers ){?>
+            <?php foreach($db["teachers"] as $teacher){?>
                 <li>
-                    <?php echo $teachers['name'];?>  <?php echo $teachers['lastname'];?>
+                    <?php echo $teacher['name'];?>  <?php echo $teacher['lastname'];?>
                 </li>
             <?php }?>
         </ul>
     </div>
     <div class="bg-green">
         <ul>
-            <?php foreach($db as $pm ){?>
+            <?php foreach($db["pm"] as $pm ){?>
                 <li>
                     <?php echo $pm['name'];?>  <?php echo $pm['lastname'];?>
                 </li>
