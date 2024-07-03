@@ -1,23 +1,27 @@
 <?php
+require_once __DIR__ . '/membership.php';
 
-/**
- * created UserPremium class
- */
-class UserPremium {
-    private $username;
-    private $usermail;
-    private $packpremium;
 
+class UserPremium extends User {
+    private $membership;
+
+public function __construct($username, $usermail,Membership $membership) {
+    parent :: __construct($username, $usermail);
+    $this->membership = $membership;
 }
-/**
- * istances of the UserPremium
- *
- * @param [type] $username
- * @param [type] $usermail
- * @param [type] $packpremium
- */
-public function __construct($username, $usermail, $packpremium) {
-    $this->username = $username;
-    $this->usermail = $usermail;
-    $this->pack = $packpremium;
+
+public function getDiscount(){
+    return '50%';
+}
+
+public function getMembership(){
+    return $this->membership;
+}
+
+public function setMembership(){
+    if(strlen($membership) === 10){
+        $this->membership = $membership;
+    }
+}
+
 }
